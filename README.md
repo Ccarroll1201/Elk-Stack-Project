@@ -77,7 +77,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 *********ADD screenshot
-
+![docker ps](Images/docker ps.png)
 
 ### Target Machines & Beats
 
@@ -108,7 +108,5 @@ curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/r
 ```
 - Update the 'hosts' file to include the private IP addresses of the ELK and Web servers.  The host names must match in the ansible playbook file for the installation to be directed to the proper machines in the network.
 - Run the playbook with the command: `ansible-playbook filebeat-playbook.yml` The output should look similar to the attached screenshot below.
-******SCREENSHOT
-
 - Navigate to Kibana to confirm the installation worked as expected. http://40.121.138.127:5601/app/kibana#/home
 - Follow the same process to configure and install Metricbeat.
