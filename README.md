@@ -76,7 +76,7 @@ The playbook implements the following tasks:
 - Enables the 'docker' service on boot. If the ELK VM is restarted, the docker service will start up automatically.
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
-*********ADD screenshot
+
 ![docker ps](Images/docker ps.png)
 
 ### Target Machines & Beats
