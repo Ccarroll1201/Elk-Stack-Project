@@ -4,11 +4,11 @@ The files in this repository were used to configure the network depicted below.
 
 ******DIAGRAM
 
-The Ansible Playbooks in the link below have been tested and used to generate a live ELK deployment on Azure. They can be used to recreate the entire deployment pictured above. Alternatively, select portions of the Playbook files may be used to install only certain pieces of it, such as Filebeat.
+The Ansible Playbooks in the link below have been tested and used to generate a live ELK deployment on Azure.  They can be used to recreate the entire deployment pictured above.  Alternatively, select portions of the Playbook files may be used to install only certain pieces of it, such as Filebeat.
 
 ******LINK TO PLAYBOOK FILE
 
-This document contains the following details:
+This document contains the following sections:
  
 - Description of the Topology
 - Access Policies
@@ -23,7 +23,7 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly reliable, in addition to assisting with potential security risks. 
-The off-loading function of a load balancer helps defend the network against distributed denial of service (DDoS) attacks. This is accomplished by shifting attack traffic across multiple servers.
+The off-loading function of a load balancer helps defend the network against distributed denial of service (DDoS) attacks.  This is accomplished by shifting attack traffic across multiple servers.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the machines files and system metrics. 
 - Filebeat generates and organizes log files to send to Logstash and Elasticsearch.  Specifically, it logs information about the file system, including which files have changed and when. 
@@ -51,7 +51,7 @@ The configuration details of each machine may be found below.
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the Jump Box Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from my personal machines IP address: 174.20.144.15
+Only the Jump Box Provisioner machine can accept connections from the Internet.  Access to this machine is only allowed from my personal machines IP address: 174.20.144.15
 
 Machines within the network (including the ELK server) can only be accessed by the Jump Box (10.0.0.7).
 
@@ -94,7 +94,7 @@ Filebeat and Metricbeat allow us to collect the following information from each 
 - Filebeat can send audit logs, depreciation logs, garbage-collection logs, server logs, and slow logs.
 *****screenshot
 
--Metricbeat is used to capture system information and monitor performance.  For example, Metricbeat can be used to monitor and analyze system CPU and memory usage.
+- Metricbeat is used to capture system information and monitor performance.  For example, Metricbeat can be used to monitor and analyze system CPU and memory usage.
 *****screenshot
 
 ### Using the Playbook
@@ -102,7 +102,13 @@ In order to use the playbook, an Ansible control node must already be configured
 
 SSH into the control node and follow the steps below:
 - Navigate to /etc/ansible/playbooks/
-- Run the command `curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > filebeat-config.yml`
-- Update the hosts file to include the private IP addresses of the ELK and Web servers.  The host names must match in the ansible playbook file for the installation to be directed to the proper machines in the network.
-- Run the playbook with the command `ansible-playbook filebeat-playbook.yml` and navigate to Kibana to confirm the installation worked as expected. http://40.121.138.127:5601/app/kibana#/home
+- Run the command:
+```bash 
+curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > filebeat-config.yml
+```
+- Update the 'hosts' file to include the private IP addresses of the ELK and Web servers.  The host names must match in the ansible playbook file for the installation to be directed to the proper machines in the network.
+- Run the playbook with the command: `ansible-playbook filebeat-playbook.yml` The output should look similar to the attached screenshot below.
+******SCREENSHOT
+
+- Navigate to Kibana to confirm the installation worked as expected. http://40.121.138.127:5601/app/kibana#/home
 - Follow the same process to configure and install Metricbeat.
