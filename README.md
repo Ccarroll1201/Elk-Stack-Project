@@ -93,11 +93,11 @@ Filebeat and Metricbeat allow us to collect the following information from each 
 
 - Filebeat can send audit logs, depreciation logs, garbage-collection logs, server logs, and slow logs.
 
-![](Images/Filebeat.png)
+![](Images/Filebeat.PNG)
 
 - Metricbeat is used to capture system information and monitor performance.  For example, Metricbeat can be used to monitor and analyze system CPU and memory usage.
 
-![](Images/Metricbeat.png)
+![](Images/Metricbeat.PNG)
 
 ### Using the Playbook
 In order to use the playbook, an Ansible control node must already be configured.  Assuming such a control node is provisioned: 
