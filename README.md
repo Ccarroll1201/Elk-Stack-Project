@@ -109,6 +109,6 @@ SSH into the control node and follow the steps below:
 curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > filebeat-config.yml
 ```
 - Update the 'hosts' file to include the private IP addresses of the ELK and Web servers.  The host names must match in the ansible playbook file for the installation to be directed to the proper machines in the network.
-- Run the playbook with the command: `ansible-playbook filebeat-playbook.yml` The output should look similar to the attached screenshot below.
+- Run the playbook with the command: `ansible-playbook filebeat-playbook.yml`
 - Navigate to Kibana to confirm the installation worked as expected. http://40.121.138.127:5601/app/kibana#/home
 - Follow the same process to configure and install Metricbeat.
