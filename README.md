@@ -2,7 +2,8 @@
 
 The files in this repository were used to configure the network depicted below.
 
-******DIAGRAM
+![](Images/AzureResourceGroupDiagram.png)
+
 
 The Ansible Playbooks in the link below have been tested and used to generate a live ELK deployment on Azure.  They can be used to recreate the entire deployment pictured above.  Alternatively, select portions of the Playbook files may be used to install only certain pieces of it, such as Filebeat.
 
@@ -64,6 +65,7 @@ A summary of the access policies in place can be found in the table below.
 | Web-2      	| No                  	| 10.0.0.7             	|
 | ELK Server 	| No                  	| 10.0.0.7             	|
 
+
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine.  No configuration was performed manually, which is advantageous because this process speeds up deployment with automation and allows for quick reproduction of new machines within the network.  Ansible playbooks can be run on a specific machine or large groups of machines within the network.
@@ -78,6 +80,7 @@ The playbook implements the following tasks:
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 ![](Images/dockerps.png)
+
 
 ### Target Machines & Beats
 
@@ -95,9 +98,11 @@ Filebeat and Metricbeat allow us to collect the following information from each 
 
 ![](Images/Filebeat.PNG)
 
+
 - Metricbeat is used to capture system information and monitor performance.  For example, Metricbeat can be used to monitor and analyze system CPU and memory usage.
 
 ![](Images/Metricbeat.PNG)
+
 
 ### Using the Playbook
 In order to use the playbook, an Ansible control node must already be configured.  Assuming such a control node is provisioned: 
