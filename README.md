@@ -6,7 +6,7 @@ The files in this repository were used to configure the network depicted below.
 
 The Ansible Playbooks in the link below have been tested and used to generate a live ELK deployment on Azure.  They can be used to recreate the entire deployment pictured above.  Alternatively, select portions of the Playbook files may be used to install only certain pieces of it, such as Filebeat.
 
-******LINK TO PLAYBOOK FILE
+- [Ansible Playbooks](Ansible Playbooks/)
 
 This document contains the following sections:
  
@@ -92,10 +92,12 @@ The following Beats were successfully installed and cofigured:
 Filebeat and Metricbeat allow us to collect the following information from each machine:
 
 - Filebeat can send audit logs, depreciation logs, garbage-collection logs, server logs, and slow logs.
-*****screenshot
+
+![](Images/Filebeat.png)
 
 - Metricbeat is used to capture system information and monitor performance.  For example, Metricbeat can be used to monitor and analyze system CPU and memory usage.
-*****screenshot
+
+![](Images/Metricbeat.png)
 
 ### Using the Playbook
 In order to use the playbook, an Ansible control node must already be configured.  Assuming such a control node is provisioned: 
